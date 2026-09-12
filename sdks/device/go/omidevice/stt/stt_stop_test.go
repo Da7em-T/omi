@@ -80,7 +80,7 @@ func TestStopDrainsTrailingResultsBeforeClose(t *testing.T) {
 	})
 	defer closeSrv()
 
-	tr := &wsTranscriber{conn: conn, finalize: parakeetFinalize, done: make(chan struct{})}
+	tr := &wsTranscriber{conn: conn, finalize: deepgramFinalize, done: make(chan struct{})}
 	var mu sync.Mutex
 	var got []string
 	go func() {
